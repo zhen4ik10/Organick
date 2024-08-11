@@ -794,6 +794,65 @@ body::-webkit-scrollbar {
     column-gap: .9375rem
   }
 }
+@media (max-width:29.99875em) {
+  ._spoller-init .spoller-footer__title {
+    cursor: pointer
+  }
+  ._spoller-init .spoller-footer__title::after,
+  ._spoller-init .spoller-footer__title::before {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    background-color: #274c5b;
+    height: 2px;
+    width: 15px;
+    transition: -webkit-transform .5s ease 0s;
+    transition: transform .5s ease 0s;
+    transition: transform .5s ease 0s,-webkit-transform .5s ease 0s
+  }
+  ._spoller-init .spoller-footer__title::before {
+    -webkit-transform: translate(-75%,-50%) rotate(40deg);
+    transform: translate(-75%,-50%) rotate(40deg)
+  }
+  ._spoller-init .spoller-footer__title::after {
+    -webkit-transform: translate(0,-50%) rotate(-40deg);
+    transform: translate(0,-50%) rotate(-40deg)
+  }
+  ._spoller-init .spoller-footer__title._spoller-active::before {
+    -webkit-transform: translateX(-75%) rotate(-40deg);
+    transform: translateX(-75%) rotate(-40deg)
+  }
+  ._spoller-init .spoller-footer__title._spoller-active::after {
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg)
+  }
+  ._spoller-init ._spoller-init .spoller-footer__title {
+    position: relative;
+    width: 100%;
+    text-align: left
+  }
+  ._spoller-init ._spoller-init .spoller-footer__title::after,
+  ._spoller-init ._spoller-init .spoller-footer__title::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: .75rem;
+    height: .0625rem;
+    transition: all .3s ease 0s;
+    width: .625rem;
+    background-color: #274c5b
+  }
+  ._spoller-init ._spoller-init .spoller-footer__title::before {
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+    right: .4375rem
+  }
+  ._spoller-init ._spoller-init .spoller-footer__title::after {
+    -webkit-transform: rotate(-40deg);
+    transform: rotate(-40deg)
+  }
+}
 @media (min-width:47.99875em)and (min-width:47.99875em)and (max-width:120em) {
   .menu__list {
     -webkit-column-gap: clamp(.9375rem ,.0625379768rem + 1.8228850194vw ,2.25rem);
